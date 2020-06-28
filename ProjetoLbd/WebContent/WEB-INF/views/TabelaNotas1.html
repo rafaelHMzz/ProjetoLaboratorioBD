@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Página de Estrutura Básica</title>
+        <meta charset="ISO-8859-1">
+        <meta name="author" content="Rafael">
+        <meta name="description" content="">
+        <meta name="keywords" content="html5, tecnologia">
+        
+        <link rel="stylesheet" href="resources/CSS/estilo.css">
+    </head>
+    <body>
+        <div id="Principal">
+            <header class="hero">
+                <div class="hero-content">
+                    <h1>Tabela Notas</h1>
+                </div>
+            </header>
+            <nav>
+                <ul>
+                    <li><h1>MENU</h1></li>
+                    <li><a th:href="@{/}">Início</a></li>
+                    <li><a th:href="@{/menuAlterarDisciplina}">Alterar disciplinas</a></li>
+                    <li><a th:href="@{/menuInserirFaltas}">Inserir Faltas</a></li>
+                    <li><a th:href="@{/notas1}">Inserir Notas</a></li>
+                    <li><a th:href="@{/tabelaFaltas1}">Tabela Faltas</a></li>
+                    <li><a th:href="@{/tabelaNotas1}">Tabela Notas</a></li>
+                </ul>
+            </nav>
+            <main>
+                <section class="content-section2">
+                    <form th:action="@{/tabelaNotas2}" th:method="post">
+                    <label class="label2">Selecione a disciplina:</label>
+					<select name="disciplina" >
+						<option value="4203-010">Arquitetura e Organização de Computadores (Tarde)</option>
+						<option value="4203-020">Arquitetura e Organização de Computadores (Noite)</option>
+						<option value="4208-010">Laboratório de Hardware (Tarde)</option>
+						<option value="4226-004">Banco de Dados (Tarde)</option>
+						<option value="4213-003">Sistemas Operacionais I (Tarde)</option>
+						<option value="4213-013">Sistemas Operacionais I (Noite)</option>
+						<option value="4233-005">Laboratório de Banco de Dados (Tarde)</option>
+						<option value="5005-220">Métodos Para a Produção do Conhecimento (Tarde)</option>
+					</select>
+					<button type="submit" name="cmd" value="tabela">Gerar Tabela</button>
+                    </form>
+                </section>
+            </main>
+        </div>
+        
+    </body>
+</html>

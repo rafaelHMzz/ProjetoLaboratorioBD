@@ -1,0 +1,238 @@
+body {
+    font-family: Arial;
+    background: #cccccc;
+    margin: 0;
+}
+
+.buttons {
+	text-align: center;
+}
+
+button {
+	background-color: #595959;
+	margin-top: 15px;
+	width: auto;
+	height: 35px;
+	font-size: 15px;
+    letter-spacing: 2px;
+    font-family: "Verdana";
+    color:white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: rgba(0,0,0,0.5);
+}
+
+.hero {
+    background-image: url(../imagens/bg-2.jpg);
+    height: 150px;
+    background-position: right center;
+    background-size: cover;
+    border-top: 1px solid transparent;
+}
+
+nav {
+    margin: 0px;
+    background-color: #595959;
+    padding: 0.5px;
+    box-sizing: border-box;
+}
+
+nav ul {
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+nav li {
+    display: inline-block;
+    list-style: none;
+    margin-left: 10px;
+}
+
+nav h1 {
+    display: block;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin: 0;
+    font-family: "Verdana";
+}
+
+nav a {
+    display: block;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 2px;
+    font-family: "Verdana";
+}
+
+nav a:hover {
+    background: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+    margin-top: 45px;
+}
+
+.hero-content h1 {
+    text-transform: uppercase;
+    font-size: 35px;
+    text-shadow: 3px 3px 5px black;
+}
+
+.content-section {
+    width: 90%;
+    height: 90%;
+    overflow: auto;
+    background-color: white;
+    padding: 15px;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.content-section2 {
+    width: 90%;
+    height: 90%;
+    overflow: auto;
+    background-color: white;
+    padding: 15px;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+   	text-align: center;
+}
+
+.content-section2 select{
+	display: block;
+	margin: auto;
+	font-family; Verdana;
+	font-size: 15px;
+	letter-spacing: 2px;
+	margin-bottom: 15px;
+}
+
+.label1{
+	padding-top: 50px;
+	padding-bottom: 50px;
+ 	display: block;
+ 	margin: auto;
+ 	font-size: 30px;
+    letter-spacing: 2px;
+    font-family: "Verdana";
+    color:red; 
+}
+
+.label2{
+	padding-top: 10px;
+	padding-bottom: 20px;
+ 	display: block;
+ 	margin: auto;
+ 	font-size: 20px;
+    letter-spacing: 2px;
+    font-family: "Verdana";
+    color:black; 
+    font-weight: bold;
+}
+
+.content-section2 input {
+	width: 35%;
+	display: block;
+	margin: auto;
+	font-family; Verdana;
+	font-size: 15px;
+	letter-spacing: 2px;
+	margin-bottom: 15px;
+}
+
+.content-table {
+    border-collapse: collapse;
+    margin: auto;
+    font-size: 15px;
+    table-layout: fixed;
+    width: 90%;
+    height: 50%;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+    background-color: #595959;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table th, .content-table td {
+    padding: 12px 15px;
+    font-family: "Verdana";
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #595959;
+}
+
+.content-table tbody tr.active-row {
+    font-weight: bold;
+    color: dodgerblue;
+}
+
+.content-table2 {
+    border-collapse: collapse;
+    margin: auto;
+    font-size: 10px;
+    table-layout: fixed;
+    width: 99%;
+    height: 50%;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table2 thead tr {
+    background-color: #595959;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table2 th, .content-table2 td {
+    padding: 12px 15px;
+    font-family: "Verdana";
+}
+
+.content-table2 tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.content-table2 tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.content-table2 tbody tr:last-of-type {
+    border-bottom: 2px solid #595959;
+}
+
+.content-table2 tbody tr.active-row {
+    font-weight: bold;
+    color: dodgerblue;
+}
+    
+    

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Página de Estrutura Básica</title>
+        <meta charset="ISO-8859-1">
+        <meta name="author" content="Rafael">
+        <meta name="description" content="">
+        <meta name="keywords" content="html5, tecnologia">
+        
+        <link rel="stylesheet" href="resources/CSS/estilo.css">
+    </head>
+    <body>
+        <div id="Principal">
+            <header class="hero">
+                <div class="hero-content">
+                    <h1>Alterar Disciplinas</h1>
+                </div>
+            </header>
+            <nav>
+                <ul>
+                    <li><h1>MENU</h1></li>
+                    <li><a th:href="@{/}">Início</a></li>
+                    <li><a th:href="@{/menuAlterarDisciplina}">Alterar disciplinas</a></li>
+                    <li><a th:href="@{/menuInserirFaltas}">Inserir Faltas</a></li>
+                    <li><a th:href="@{/notas1}">Inserir Notas</a></li>
+                    <li><a th:href="@{/tabelaFaltas1}">Tabela Faltas</a></li>
+                    <li><a th:href="@{/tabelaNotas1}">Tabela Notas</a></li>
+                </ul>
+            </nav>
+            <main>
+                <section class="content-section">
+                    <form th:action="@{/disciplina2}" th:object="${disciplina}" th:method="post">
+                        <table class="content-table">
+                            <thead>
+                                <tr>
+                                    <th>Código</th>
+                                    <th>Nome</th>
+                                    <th>Sigla</th>
+                                    <th>turno</th>
+                                    <th>Nº Aulas</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="text" th:field="*{cod}" th:value="*{cod}"></td>
+                                    <td><input type="text" th:field="*{nome}" th:value="*{nome}"></td>
+                                    <td><input type="text" th:field="*{sigla}" th:value="*{sigla}"></td>
+                                    <td><input type="text" th:field="*{turno}" th:value="*{turno}"></td>
+                                    <td><input type="text" th:field="*{n_aulas}" th:value="*{n_aulas}"></td>
+                                </tr>
+                        </table>
+                        <div class="buttons">
+                        	<button type="submit" name="cmd" value="salvar">Salvar</button>
+                        </div>
+                    </form>
+                </section>
+            </main>
+        </div>
+        
+    </body>
+</html>

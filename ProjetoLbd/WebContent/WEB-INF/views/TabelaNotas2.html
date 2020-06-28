@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Página de Estrutura Básica</title>
+        <meta charset="ISO-8859-1">
+        <meta name="author" content="Rafael">
+        <meta name="description" content="">
+        <meta name="keywords" content="html5, tecnologia">
+        
+        <link rel="stylesheet" href="resources/CSS/estilo.css">
+    </head>
+    <body>
+        <div id="Principal">
+            <header class="hero">
+                <div class="hero-content">
+                    <h1>Tabela Notas</h1>
+                </div>
+            </header>
+            <nav>
+                <ul>
+                    <li><h1>MENU</h1></li>
+                    <li><a th:href="@{/}">Início</a></li>
+                    <li><a th:href="@{/menuAlterarDisciplina}">Alterar disciplinas</a></li>
+                    <li><a th:href="@{/menuInserirFaltas}">Inserir Faltas</a></li>
+                    <li><a th:href="@{/notas1}">Inserir Notas</a></li>
+                    <li><a th:href="@{/tabelaFaltas1}">Tabela Faltas</a></li>
+                    <li><a th:href="@{/tabelaNotas1}">Tabela Notas</a></li>
+                </ul>
+            </nav>
+            <main>
+                <section class="content-section">
+                    <form th:action="@{/geraRelatorioNotas}" th:method="post" th:object="${disciplina}" th:target="_blank">
+                    	<input type=hidden th:name="disciplina" th:value="${disciplina}"/>
+                        <table class="content-table2">
+                            <thead>
+                                <tr>
+                                    <th>Ra aluno</th>
+                                    <th>Nome aluno</th>
+                                    <th>Nota 1</th>
+                                    <th>Nota 2</th>
+                                    <th>Nota 3</th>
+                                    <th>Nota 4</th>
+                                    <th>Nota 5</th>
+                                    <th>Média Final</th>
+                                    <th>Situação</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr th:each="tabelaNotas : ${listaTabelaNotas}">
+                                    <td th:text="${tabelaNotas.ra_aluno}"></td>
+                                    <td th:text="${tabelaNotas.nome_aluno}"></td>
+                                    <td th:text="${tabelaNotas.nota1}"></td>
+                                    <td th:text="${tabelaNotas.nota2}"></td>
+                                    <td th:text="${tabelaNotas.nota3}"></td>
+                                    <td th:text="${tabelaNotas.nota4}"></td>
+                                    <td th:text="${tabelaNotas.nota5}"></td>
+                                    <td th:text="${tabelaNotas.media_final}"></td>
+                                    <td th:text="${tabelaNotas.situacao}"></td>
+                                </tr>
+                        </table>
+                        <div class="buttons">
+                        	<button type="submit" name="cmd" value="relatorio">Gerar Relatório</button>
+                        </div>
+                    </form>
+                </section>
+            </main>
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Página de Estrutura Básica</title>
+        <meta charset="ISO-8859-1">
+        <meta name="author" content="Rafael">
+        <meta name="description" content="">
+        <meta name="keywords" content="html5, tecnologia">
+        
+        <link rel="stylesheet" href="resources/CSS/estilo.css">
+    </head>
+    <body>
+        <div id="Principal">
+            <header class="hero">
+                <div class="hero-content">
+                    <h1>Inserir Notas</h1>
+                </div>
+            </header>
+            <nav>
+                <ul>
+                    <li><h1>MENU</h1></li>
+                    <li><a th:href="@{/}">Início</a></li>
+                    <li><a th:href="@{/menuAlterarDisciplina}">Alterar disciplinas</a></li>
+                    <li><a th:href="@{/menuInserirFaltas}">Inserir Faltas</a></li>
+                    <li><a th:href="@{/notas1}">Inserir Notas</a></li>
+                    <li><a th:href="@{/tabelaFaltas1}">Tabela Faltas</a></li>
+                    <li><a th:href="@{/tabelaNotas1}">Tabela Notas</a></li>
+                </ul>
+            </nav>
+            <main>
+                <section class="content-section2">
+                    <form th:action="@{/notas3}" th:object="${nota}" th:method="post">
+                   		<label class="label2">Selecione o código da avaliação:</label>
+                   		<input type=text th:name="cod_disc" th:value="${disciplina.cod}" readonly=readonly>
+						<input type=text th:value="${disciplina.nome}" readonly=readonly>
+						<input type=text th:value="${disciplina.turno}" readonly=readonly>
+						<select th:name="cod_avaliacao">
+							<option th:each="av : ${listaAvaliacoes}" th:text="${av.cod}"></option>
+						</select>
+						<button type="submit" name="cmd" value="inserir">Inserir</button>
+                    </form>
+                </section>
+            </main>
+        </div>
+        
+    </body>
+</html>
